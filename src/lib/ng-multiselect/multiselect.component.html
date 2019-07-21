@@ -1,0 +1,21 @@
+<div class="multiselect" >
+    <div class="ss-multi-selected">
+      <div class="multiselect-tags">
+        <div class="multiselect-tag" *ngFor="let option of selectedOptions" (click)="removeOption(option)">
+          <span class="multiselect-tag-text">{{option.value}}</span>
+          <span class="multiselect-tag-remove">x</span>
+        </div>
+      </div>
+  
+    </div>
+    <div class="multiselect-dropdown multiselect-dropdown-open" >
+      <div class="multiselect-filter">
+        <input type="text" placeholder="{{placeholder}}" (keyup)="filterOptions($event)" (click)="showDropDown()">
+      </div>
+      <div class="multiselect-dropdown-list" *ngIf="dropDownVisible">
+        <div class="multiselect-dropdown-option" *ngFor="let option of filteredOptions" (click)="addOption(option)">{{option.value}}</div>
+      </div>
+    </div>
+  </div>
+  
+  
