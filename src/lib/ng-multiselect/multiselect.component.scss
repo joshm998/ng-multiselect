@@ -1,0 +1,203 @@
+
+.multiselect {
+  position: relative;
+  display: inline-block;
+  color: #666;
+  width: 100%;
+  border-radius: 4px;
+  .multiselect-selected {
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    min-height: 30px;
+    width: 100%;
+    padding: 0 0 0 3px;
+    border: 1px solid #dcdee2;
+    box-sizing: border-box;
+    transition: background-color 0.2s;
+
+    .multiselect-tags {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      flex: 1 1 100%;
+      width: calc(100% - 30px);
+    
+      .multiselect-tag {
+        display: flex;
+        user-select: none;
+        align-items: center;
+        font-size: 12px;
+        padding: 3px 5px;
+        margin: 3px 5px 3px 0px;
+        color: #fff;
+        background-color: #5897fb;
+        border-radius: 4px;
+
+        .multiselect-tag-remove {
+          margin: 0 0 0 5px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  .multiselect-dropdown {
+    position: absolute;
+    width: 100%;
+    margin: -1px 0 0 0;
+    box-sizing: border-box;
+    border: solid 1px #dcdee2;
+    z-index: 1010;
+    background-color: #fff;
+    transform-origin: center top;
+    transition: transform 0.2s, opacity 0.2s;
+    opacity: 1;
+    transform: scaleY(1);
+    display: block;
+
+    .multiselect-filter {
+      display: flex;
+      flex-direction: row;
+      padding: 8px 8px 6px 8px;
+    }
+
+    .multiselect-dropdown-list {
+      max-height: 200px;
+      overflow-x: hidden;
+      overflow-y: auto;
+      text-align: left;
+
+      .multiselect-dropdown-option {
+        padding: 6px 10px 6px 10px;
+        cursor: pointer;
+        user-select: none;
+      }
+
+      .multiselect-dropdown-option:hover {
+        color: #fff;
+        background-color: #5897fb;
+      }
+    }
+  }
+  .multiselect-filter {
+    flex-grow: 1;
+  }
+  .multiselect-filter input {
+    display: inline-flex;
+    font-size: inherit;
+    line-height: inherit;
+    flex: 1 1 auto;
+    width: 100%;
+    min-width: 0px;
+    height: 30px;
+    padding: 6px 8px;
+    margin: 0;
+    outline: none;
+    background-color: transparent !important;
+    text-align: left;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -webkit-appearance: textfield;
+    border: none;
+  }
+
+}
+
+  // .multiselect .ss-multi-selected {
+  //   cursor: pointer;
+  //   display: flex;
+  //   flex-direction: row;
+  //   min-height: 30px;
+  //   width: 100%;
+  //   padding: 0 0 0 3px;
+  //   border: 1px solid #dcdee2;
+  //   box-sizing: border-box;
+  //   transition: background-color 0.2s;
+  // }
+
+  // .multiselect .ss-multi-selected .multiselect-tags {
+  //   display: flex;
+  //   flex-wrap: wrap;
+  //   justify-content: flex-start;
+  //   flex: 1 1 100%;
+  //   width: calc(100% - 30px);
+  // }
+
+  // .multiselect .ss-multi-selected .multiselect-tags .multiselect-tag {
+  //   display: flex;
+  //   user-select: none;
+  //   align-items: center;
+  //   font-size: 12px;
+  //   padding: 3px 5px;
+  //   margin: 3px 5px 3px 0px;
+  //   color: #fff;
+  //   background-color: #5897fb;
+  //   border-radius: 4px;
+  // }
+
+  // .multiselect .ss-multi-selected .multiselect-tags .multiselect-tag .multiselect-tag-remove {
+  //   margin: 0 0 0 5px;
+  //   cursor: pointer;
+  // }
+
+  // .multiselect .multiselect-dropdown {
+  //   position: absolute;
+  //   width: 100%;
+  //   margin: -1px 0 0 0;
+  //   box-sizing: border-box;
+  //   border: solid 1px #dcdee2;
+  //   z-index: 1010;
+  //   background-color: #fff;
+  //   transform-origin: center top;
+  //   transition: transform 0.2s, opacity 0.2s;
+  //   opacity: 0;
+  //   transform: scaleY(0);
+  // }
+  // .multiselect .multiselect-dropdown.multiselect-dropdown-open {
+  //   display: block;
+  //   opacity: 1;
+  //   transform: scaleY(1);
+  // }
+  // .multiselect .multiselect-dropdown .multiselect-filter {
+  //   display: flex;
+  //   flex-direction: row;
+  //   padding: 8px 8px 6px 8px;
+  // }
+  // .multiselect .multiselect-dropdown .multiselect-filter input {
+  //   display: inline-flex;
+  //   font-size: inherit;
+  //   line-height: inherit;
+  //   flex: 1 1 auto;
+  //   width: 100%;
+  //   min-width: 0px;
+  //   height: 30px;
+  //   padding: 6px 8px;
+  //   margin: 0;
+  //   border: 1px solid #dcdee2;
+  //   background-color: #fff;
+  //   text-align: left;
+  //   box-sizing: border-box;
+  //   -webkit-box-sizing: border-box;
+  //   -webkit-appearance: textfield;
+  // }
+
+  // .multiselect .multiselect-dropdown .multiselect-dropdown-list {
+  //   max-height: 200px;
+  //   overflow-x: hidden;
+  //   overflow-y: auto;
+  //   text-align: left;
+  // }
+
+  // .multiselect .multiselect-dropdown .multiselect-dropdown-list .multiselect-dropdown-option {
+  //   padding: 6px 10px 6px 10px;
+  //   cursor: pointer;
+  //   user-select: none;
+  // }
+  // .multiselect .multiselect-dropdown .multiselect-dropdown-list .multiselect-dropdown-option:hover, .multiselect .multiselect-dropdown .multiselect-dropdown-list .multiselect-dropdown-option.highlighted {
+  //   color: #fff;
+  //   background-color: #5897fb;
+  // }
+  // .multiselect .multiselect-dropdown .multiselect-dropdown-list .multiselect-dropdown-option.multiselect-dropdown-disabled {
+  //   color: #dedede;
+  //   background-color: #fff;
+  // }
